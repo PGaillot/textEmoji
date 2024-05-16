@@ -25,8 +25,20 @@ export class AppComponent {
       emoji: ' :eyeglasses: ',
     },
     {
-      words: ['<3', 'love', 'coeur', 'cœur'],
+      words: ['<3', 'love', 'coeur', 'cœur', 'aime'],
       emoji: ' :purple_heart: ',
+    },
+    {
+      words: ['soleil'],
+      emoji: ' :sun_with_face: ',
+    },
+    {
+      words: ['lapin'],
+      emoji: ' :rabbit: ',
+    },
+    {
+      words: ['chou', 'choux'],
+      emoji: ' :leafy_green: ',
     },
   ];
 
@@ -40,9 +52,7 @@ export class AppComponent {
 
   convertTextToEmojis(text: string): string {
     let result: string = '';
-
     const inputArrray: string[] = text.split('');
-
     inputArrray.forEach((letter: string) => {
       let emoji: string = '';
 
@@ -80,8 +90,6 @@ export class AppComponent {
       },
       []
     );
-
-    console.log(magicsTriggersWords);
 
     this.inputText.valueChanges.subscribe((input: string) => {
       this.result = ''
