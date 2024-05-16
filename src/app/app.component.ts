@@ -30,6 +30,10 @@ export class AppComponent {
             emoji = ' :blue_square: ';
             break;
 
+            case '\'':
+            emoji = ' :blue_square: ';
+            break;
+
             case '?':
             emoji = ' :question: ';
             break;
