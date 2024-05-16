@@ -102,12 +102,20 @@ export class AppComponent {
             const magicWord: MagicWords = this.magicsWords.filter(
               (mw: MagicWords) => mw.words.includes(w)
             )[0];
-            parts = [
-              input.slice(0, input.indexOf(w)),
-              magicWord.emoji,
-              input.slice(input.indexOf(w) + w.length, input.length),
-            ];
-            console.log(parts);
+
+            if(parts.length <= 1){
+              parts = [
+                input.slice(0, input.indexOf(w)),
+                magicWord.emoji,
+                input.slice(input.indexOf(w) + w.length, input.length),
+              ];
+            } else {
+              parts = [
+              ...parts,
+                magicWord.emoji,
+                input.slice(input.indexOf(w) + w.length, input.length),
+              ];
+            }
           }
         });
       }
