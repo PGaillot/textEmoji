@@ -1,4 +1,11 @@
-p{
-    padding: 1rem;
-    border: 2px solid blue;
+#main-page{
+
+    display: flex;
+    flex-direction: column;
+    
+    p{
+        padding: 1rem;
+        border: 2px solid blue;
+    }
+
 }

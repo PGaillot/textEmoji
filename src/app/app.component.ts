@@ -17,6 +17,12 @@ export class AppComponent {
 
   inputText: FormControl = new FormControl('');
 
+
+
+  copy(){
+  navigator.clipboard.writeText(this.result);
+  }
+
   ngOnInit(): void {
     this.inputText.valueChanges.subscribe((input: string) => {
       this.result = '';

@@ -1,5 +1,7 @@
-<input type="text" [formControl]="inputText">
+<div id="main-page">
+    <label for="inputText">Entrez votre texte :</label>
+    <input id="inputText" type="text" [formControl]="inputText">
 
-
-
-<p>{{result}}</p>
+    <p>{{result}}</p>
+    <button (click)="copy()">Copier le resultat</button>
+</div>
